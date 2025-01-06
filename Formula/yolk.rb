@@ -1,20 +1,21 @@
 class Yolk < Formula
   desc "Templated dotfile management without template files"
   homepage "https://elkowar.github.io/yolk"
-  version "0.0.16"
+  version "0.1.0"
   if OS.mac?
-    url "https://github.com/elkowar/yolk/releases/download/v0.0.16/yolk_dots-x86_64-apple-darwin.tar.xz"
-    sha256 "06ac50574c9e3524db50852cc4d3d09b3252de238fd5641bc0e232acc8a5812b"
+    url "https://github.com/elkowar/yolk/releases/download/v0.1.0/yolk_dots-x86_64-apple-darwin.tar.xz"
+    sha256 "f142dbf10707277f0219f61115ee067753664b126de4ac0c0cc43eacdff50087"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/elkowar/yolk/releases/download/v0.0.16/yolk_dots-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "762f59285681b32608e90c2e477588d2f0044a1d131a17a76bdcc7e7ea832534"
+    url "https://github.com/elkowar/yolk/releases/download/v0.1.0/yolk_dots-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "4f76ee6f1e1e8a44743cda76e7c8d98c2f30428acf9ecb0d3befbcfb830c8063"
   end
   license any_of: ["MIT", "Apache-2.0"]
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":     {},
     "x86_64-apple-darwin":      {},
+    "x86_64-pc-windows-gnu":    {},
     "x86_64-unknown-linux-gnu": {},
   }.freeze
 
