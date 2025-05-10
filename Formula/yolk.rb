@@ -1,14 +1,14 @@
 class Yolk < Formula
   desc "Templated dotfile management without template files"
   homepage "https://elkowar.github.io/yolk"
-  version "0.3.2"
+  version "0.3.4"
   if OS.mac?
-    url "https://github.com/elkowar/yolk/releases/download/v0.3.2/yolk_dots-x86_64-apple-darwin.tar.xz"
-    sha256 "c3f9d0765e4687603a7c15d9cd1f5894f982aadec1d5e35e174a73b88cc8ee0b"
+    url "https://github.com/elkowar/yolk/releases/download/v0.3.4/yolk_dots-x86_64-apple-darwin.tar.xz"
+    sha256 "f4b23507aa46307009a7d1c05cf31d85a7ddddad210979e929a3e9a9c6ad9fcd"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/elkowar/yolk/releases/download/v0.3.2/yolk_dots-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "b011578d25c18ccbd2181c87f30c9c87139df5b934ff674ed175e355d9192034"
+    url "https://github.com/elkowar/yolk/releases/download/v0.3.4/yolk_dots-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "f338128a0eca7d8fc413ca09343bd62670ac39d104192c5b59eaf763f9a57255"
   end
   license any_of: ["MIT", "Apache-2.0"]
 
