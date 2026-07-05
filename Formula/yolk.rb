@@ -1,20 +1,20 @@
 class Yolk < Formula
   desc "Templated dotfile management without template files"
   homepage "https://elkowar.github.io/yolk"
-  version "0.3.8"
+  version "0.3.9"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/elkowar/yolk/releases/download/v0.3.8/yolk_dots-aarch64-apple-darwin.tar.xz"
-      sha256 "fac338e69cd7fb742d6dde454c727803a405df502e1eeedcf26eaafb60971cde"
+      url "https://github.com/elkowar/yolk/releases/download/v0.3.9/yolk_dots-aarch64-apple-darwin.tar.xz"
+      sha256 "10c53d08d2cc7a35d9d8dcd219234c029334fed22b7013bcf9592b6609a1c4b1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/elkowar/yolk/releases/download/v0.3.8/yolk_dots-x86_64-apple-darwin.tar.xz"
-      sha256 "33801037892db2acc12267a707b0e4815fa572be74052b58fbab66d05a4956d3"
+      url "https://github.com/elkowar/yolk/releases/download/v0.3.9/yolk_dots-x86_64-apple-darwin.tar.xz"
+      sha256 "822b958dc7a787c59a1b5f08259fa443b3b8a435ab2a22f786b6eae65b5ffe0e"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/elkowar/yolk/releases/download/v0.3.8/yolk_dots-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "a6f919a2c9e99102edd70639ed1414442bbc71b5f91d713f78c49908f5546a59"
+    url "https://github.com/elkowar/yolk/releases/download/v0.3.9/yolk_dots-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "acafb108f8064955ebf81838660d6642c03a1279667708ec1f799de4d6958203"
   end
   license any_of: ["MIT", "Apache-2.0"]
 
