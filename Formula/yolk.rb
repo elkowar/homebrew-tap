@@ -1,25 +1,26 @@
 class Yolk < Formula
   desc "Templated dotfile management without template files"
   homepage "https://elkowar.github.io/yolk"
-  version "1.0.0"
+  version "1.1.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/elkowar/yolk/releases/download/v1.0.0/yolk_dots-aarch64-apple-darwin.tar.xz"
-      sha256 "c271d219c37f8922b2accc8caf4534331171912fd9c6672f2a9ce49bd35d8f0c"
+      url "https://github.com/elkowar/yolk/releases/download/v1.1.0/yolk_dots-aarch64-apple-darwin.tar.xz"
+      sha256 "8e70133b61340b2f32270727210ea0c04fb56cea89cb99fa942229ad11c30d84"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/elkowar/yolk/releases/download/v1.0.0/yolk_dots-x86_64-apple-darwin.tar.xz"
-      sha256 "57e5519014151c1d7324b1d156b527d6256910ce0bde46ab199c219c42c802b6"
+      url "https://github.com/elkowar/yolk/releases/download/v1.1.0/yolk_dots-x86_64-apple-darwin.tar.xz"
+      sha256 "9a60b6b2ae158a7de39157dda9f1083cac35e35b0a97929720c972833d81b3ac"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/elkowar/yolk/releases/download/v1.0.0/yolk_dots-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "f1fb43299faebe9418890aa22e29726b3f58f6fda5895ea715a99e4b3e826895"
+    url "https://github.com/elkowar/yolk/releases/download/v1.1.0/yolk_dots-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "493112d1878ffc351e60af4518190e6c343095954928a807f565265fcad5c77a"
   end
   license any_of: ["MIT", "Apache-2.0"]
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":              {},
+    "aarch64-linux-android":             {},
     "x86_64-apple-darwin":               {},
     "x86_64-pc-windows-gnu":             {},
     "x86_64-unknown-linux-gnu":          {},
@@ -46,7 +47,6 @@ class Yolk < Formula
     bin.install "yolk" if OS.mac? && Hardware::CPU.arm?
     bin.install "yolk" if OS.mac? && Hardware::CPU.intel?
     bin.install "yolk" if OS.linux? && Hardware::CPU.intel?
-    generate_completions_from_executable(bin/"yolk", shell_parameter_format: :clap)
 
     install_binary_aliases!
 
