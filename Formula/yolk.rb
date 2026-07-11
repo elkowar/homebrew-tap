@@ -47,6 +47,7 @@ class Yolk < Formula
     bin.install "yolk" if OS.mac? && Hardware::CPU.arm?
     bin.install "yolk" if OS.mac? && Hardware::CPU.intel?
     bin.install "yolk" if OS.linux? && Hardware::CPU.intel?
+    generate_completions_from_executable(bin/"yolk", shell_parameter_format: :clap)
 
     install_binary_aliases!
 
